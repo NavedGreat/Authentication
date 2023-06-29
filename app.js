@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema ({
     email: String,
     password: String
 });
-
+// level - 2 encryption
 const secret = "Thisisourlittlesecret.";
 userSchema.plugin(encrypt, {secret: secret, encryptedFields: ["password"]});
 
